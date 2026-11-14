@@ -2,56 +2,135 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="ZvlsoSXFE0JZmUF4bNk6KlUQrRax9VApCJID1gIxaL8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vienvenidos</title>
+    <title>Mariano Web - Bienvenidos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
- margin-top: 40px;
-    cursor: pointer;
-    background-color: #00C853;
-    color: verde;
-    border: border: 2px solid green;
-    border-radius: 20px;
-}
-</style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 50% 40%, #32105c, transparent 45%),
+                linear-gradient(135deg, #050008, #100020, #030006);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 22px;
+            border-bottom: 2px solid #a100ff;
+            box-shadow: 0 0 20px #a100ff;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        header span {
+            color: #c000ff;
+        }
+
+        main {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        .corona {
+            font-size: 75px;
+            filter: drop-shadow(0 0 15px #c000ff);
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(55px, 10vw, 105px);
+            color: white;
+            text-shadow: 0 0 15px #a100ff,
+                         0 0 35px #a100ff;
+            margin: 10px 0 20px;
+        }
+
+        h1 span {
+            color: #c000ff;
+        }
+
+        p {
+            max-width: 700px;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #eee0ff;
+            margin-bottom: 35px;
+        }
+
+        .boton {
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border: 2px solid #c000ff;
+            border-radius: 40px;
+            box-shadow: 0 0 15px #a100ff;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #a100ff;
+            box-shadow: 0 0 30px #c000ff;
+        }
+
+        .decoracion {
+            font-size: 30px;
+            margin: 25px;
+            color: #d58aff;
+            text-shadow: 0 0 15px #a100ff;
+        }
+
+        footer {
+            padding: 20px;
+            color: #b98ad6;
+            font-size: 13px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1 style="color: green; text-align: center; font-size: 60px;">EN PROCESO</h1>
-<h2>Mi espacio para dibujar</h2>
+    <header>
+        ♛ Mariano <span>Web</span>
+    </header>
 
-<canvas id="miLienzo" width="500" height="300"
-style="border: 2px solid green; background: white;">
-</canvas>
-<script>
-const lienzo = document.getElementById("miLienzo");
-const ctx = lienzo.getContext("2d");
+    <main>
+        <div class="decoracion">🦋 ✨ ♛ ✨ 🦋</div>
 
-let dibujando = false;
+        <div class="corona">👑</div>
 
-lienzo.addEventListener("mousedown", (e) => {
-    dibujando = true;
-    ctx.beginPath();
-    ctx.moveTo(e.offsetX, e.offsetY);
-});
+        <h1>Bienvenidos a <span>Mariano Web</span></h1>
 
-lienzo.addEventListener("mousemove", (e) => {
-    if (!dibujando) return;
+        <p>
+            Un espacio creado con creatividad, dedicación e imaginación.
+            Aquí cada idea se convierte en una nueva oportunidad para
+            aprender, descubrir y crear. 💜
+        </p>
 
-    ctx.lineTo(e.offsetX, e.offsetY);
-    ctx.strokeStyle = "green";
-    ctx.lineWidth = 3;
-    ctx.stroke();
-});
+        <a href="#mensaje" class="boton">Explora más →</a>
 
-lienzo.addEventListener("mouseup", () => {
-    dibujando = false;
-});
+        <div id="mensaje" class="decoracion">
+            ✨ Gracias por visitar mi página ✨
+        </div>
+    </main>
 
-lienzo.addEventListener("mouseleave", () => {
-    dibujando = false;
-});
-</form>
+    <footer>
+        © 2026 Mariano Web | Creado con creatividad 💜
+    </footer>
 
 </body>
 </html>
