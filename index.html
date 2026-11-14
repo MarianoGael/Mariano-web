@@ -110,6 +110,40 @@ p {
     line-height: 1.8;
 }
 
+/* BOTONES */
+button {
+    background: #850000;
+    color: white;
+    border: 2px solid red;
+    padding: 15px 30px;
+    margin: 25px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 0 15px red;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: red;
+    transform: scale(1.05);
+}
+
+/* VENTANA DEL TEXTO */
+.texto-oculto {
+    display: none;
+    background: #100000;
+    border: 2px solid red;
+    box-shadow: 0 0 25px red;
+    padding: 30px;
+    margin: 20px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.texto-oculto h2 {
+    margin-bottom: 20px;
+}
+
 @keyframes brillo {
     from { filter: drop-shadow(0 0 5px red); }
     to { filter: drop-shadow(0 0 30px red); }
@@ -136,6 +170,11 @@ footer {
 
 <body>
 
+<div class="diablo esquina1">😈</div>
+<div class="diablo esquina2">👿</div>
+<div class="diablo esquina3">👿</div>
+<div class="diablo esquina4">😈</div>
+
 <main>
 
     <div class="corona">♛</div>
@@ -154,20 +193,50 @@ footer {
     <div class="linea"></div>
 
     <p>
-        Pagina creada por Mariano D"7
-        co-owner-Gael Rivera <br> 
-        (no se hace responsable si se instala
-        virus a su pc)<br>
-        
+        Página creada por Mariano D"7<br>
+        co-owner-Gael Rivera<br>
+        (No nos hacemos responsables por
+        programas instalados en tu PC).
     </p>
 
-    
+    <!-- BOTÓN PARA ABRIR EL TEXTO -->
+    <button onclick="abrirTexto()">
+        LEER MENSAJE
+    </button>
+
+    <!-- TEXTO QUE APARECE AL PULSAR -->
+    <div id="miTexto" class="texto-oculto">
+
+        <h2>BIENVENIDO</h2>
+
+        <p>
+            Esta es nuestra página.<br>
+            Gracias por visitarla.<br>
+            Disfruta del contenido y explora
+            nuestro espacio.
+        </p>
+
+        <button onclick="cerrarTexto()">
+            CERRAR
+        </button>
+
+    </div>
 
 </main>
 
 <footer>
-    © Creador Mariano  - PAITA-PERU
+    © Creador Mariano - PAITA-PERÚ
 </footer>
+
+<script>
+function abrirTexto() {
+    document.getElementById("miTexto").style.display = "block";
+}
+
+function cerrarTexto() {
+    document.getElementById("miTexto").style.display = "none";
+}
+</script>
 
 </body>
 </html>
