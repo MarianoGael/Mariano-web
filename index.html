@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LOS ILUMINATIS - NUEVA GENERACIÓN</title>
+<title>LOS KALAKITOS - PAITA</title>
 
 <style>
 * {
@@ -16,50 +16,29 @@
 body {
     min-height: 100vh;
     background:
-        radial-gradient(ellipse at center, #500000 0%, #180000 40%, #000 85%);
+        radial-gradient(circle at center, #4b0000, #160000 50%, #000 85%);
     color: white;
     font-family: Georgia, serif;
     overflow-x: hidden;
 }
 
-header {
-    text-align: center;
-    padding: 25px;
-    background: #080000;
-    border-bottom: 2px solid #a00000;
-    box-shadow: 0 0 25px red;
-    letter-spacing: 6px;
-    font-size: 20px;
-}
-
 main {
-    min-height: 90vh;
-    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 50px 20px;
-}
-
-.crown {
-    font-size: 90px;
-    color: #ff3333;
-    filter: drop-shadow(0 0 20px red);
-    animation: flotar 3s infinite ease-in-out;
+    padding: 30px 15px;
+    position: relative;
 }
 
 h1 {
-    font-size: clamp(38px, 8vw, 90px);
+    font-size: clamp(35px, 8vw, 85px);
     font-weight: 900;
     letter-spacing: 5px;
     background: linear-gradient(
-        180deg,
-        #ffffff,
-        #ff7777,
-        #d00000,
-        #650000
+        180deg, white, #ff5555, #d00000, #650000
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -69,11 +48,66 @@ h1 {
 }
 
 h2 {
+    color: #ff2222;
+    font-size: clamp(22px, 5vw, 45px);
+    letter-spacing: 7px;
     margin-top: 20px;
-    font-size: clamp(22px, 5vw, 48px);
-    color: #ff2525;
-    letter-spacing: 6px;
+    text-shadow: 0 0 20px red;
+}
+
+h3 {
+    color: white;
+    font-size: 28px;
+    letter-spacing: 10px;
+    margin-top: 18px;
     text-shadow: 0 0 15px red;
+}
+
+.corona {
+    font-size: 85px;
+    color: red;
+    filter: drop-shadow(0 0 20px red);
+    animation: flotar 3s infinite ease-in-out;
+}
+
+.diablo {
+    position: fixed;
+    font-size: 55px;
+    filter: drop-shadow(0 0 15px red);
+}
+
+.esquina1 { top: 15px; left: 15px; }
+.esquina2 { top: 15px; right: 15px; }
+.esquina3 { bottom: 15px; left: 15px; }
+.esquina4 { bottom: 15px; right: 15px; }
+
+.laterales {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    color: #ff2020;
+    font-size: 35px;
+    margin: 30px 0;
+    text-shadow: 0 0 20px red;
+}
+
+.linea {
+    width: 80%;
+    max-width: 600px;
+    height: 3px;
+    background: linear-gradient(
+        90deg, transparent, red, white, red, transparent
+    );
+    box-shadow: 0 0 20px red;
+    margin: 25px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #ddd;
+    line-height: 1.8;
 }
 
 @keyframes brillo {
@@ -86,131 +120,60 @@ h2 {
     50% { transform: translateY(-12px); }
 }
 
-.decoracion {
-    color: #ff2222;
-    font-size: 38px;
-    margin: 25px;
-    letter-spacing: 12px;
-    text-shadow: 0 0 20px red;
-}
-
-.diablo {
-    position: fixed;
-    font-size: 55px;
-    filter: drop-shadow(0 0 15px red);
-    z-index: 2;
-}
-
-.arriba-izq { top: 15px; left: 15px; }
-.arriba-der { top: 15px; right: 15px; }
-.abajo-izq { bottom: 15px; left: 15px; }
-.abajo-der { bottom: 15px; right: 15px; }
-
-.linea {
-    width: 75%;
-    max-width: 550px;
-    height: 3px;
-    margin: 25px;
-    background: linear-gradient(
-        90deg, transparent, red, white, red, transparent
-    );
-    box-shadow: 0 0 18px red;
-}
-
-p {
-    max-width: 650px;
-    color: #ddd;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.9;
-}
-
-button {
-    margin-top: 35px;
-    padding: 16px 35px;
-    background: #180000;
-    border: 2px solid red;
-    color: white;
-    font-size: 16px;
-    letter-spacing: 3px;
-    box-shadow: 0 0 20px red;
-    cursor: pointer;
-    transition: .3s;
-}
-
-button:hover {
-    background: #a00000;
-    transform: scale(1.08);
-}
-
-#mensaje {
-    color: #ff4444;
-    margin-top: 25px;
-}
-
 footer {
-    text-align: center;
-    padding: 25px;
-    color: #a44;
+    padding: 20px;
+    color: #bb4444;
     border-top: 1px solid #700;
+    text-align: center;
 }
 
 @media(max-width: 600px) {
-    .diablo { font-size: 35px; opacity: .7; }
+    .diablo { font-size: 35px; }
+    .laterales { font-size: 25px; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="diablo arriba-izq">😈</div>
-<div class="diablo arriba-der">😈</div>
-<div class="diablo abajo-izq">👿</div>
-<div class="diablo abajo-der">👿</div>
-
-<header>
-    ✦ LOS ILUMINATIS ✦
-</header>
+<div class="diablo esquina1">😈</div>
+<div class="diablo esquina2">👿</div>
+<div class="diablo esquina3">👿</div>
+<div class="diablo esquina4">😈</div>
 
 <main>
 
-    <div class="crown">♛</div>
+    <div class="corona">♛</div>
 
-    <div class="decoracion">✦ ⛧ ✦</div>
+    <div class="laterales">
+        <span>⛓ ✦</span>
+        <span>✦ ⛓</span>
+    </div>
 
-    <h1>LOS ILUMINATIS</h1>
+    <h1>LOS KALAKITOS</h1>
 
     <h2>NUEVA GENERACIÓN</h2>
+
+    <h3>— PAITA —</h3>
 
     <div class="linea"></div>
 
     <p>
-        Bienvenidos a una nueva generación.
-        Un espacio de misterio, personalidad,
-        creatividad y estilo.
-        Aquí comienza una nueva historia.
+        UNA NUEVA GENERACIÓN<br>
+        UN NUEVO ESTILO<br>
+        UNA NUEVA HISTORIA
     </p>
 
-    <div class="decoracion">🔥 ✧ 🔥</div>
-
-    <button onclick="mostrarMensaje()">
-        DESCUBRIR MÁS
-    </button>
-
-    <p id="mensaje"></p>
+    <div class="laterales">
+        <span>🔥 ✧</span>
+        <span>✧ 🔥</span>
+    </div>
 
 </main>
 
 <footer>
-    © 2026 LOS ILUMINATIS - NUEVA GENERACIÓN
+    © 2026 LOS KALAKITOS - PAITA
 </footer>
-
-<script>
-function mostrarMensaje() {
-    document.getElementById("mensaje").textContent =
-        "🔥 UNA NUEVA GENERACIÓN COMIENZA 🔥";
-}
-</script>
 
 </body>
 </html>
