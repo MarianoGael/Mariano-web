@@ -1,136 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariano Web - Bienvenidos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<title>LOS ILUMINATIS - NUEVA GENERACIÓN</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            min-height: 100vh;
-            background:
-                radial-gradient(circle at 50% 40%, #32105c, transparent 45%),
-                linear-gradient(135deg, #050008, #100020, #030006);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            overflow-x: hidden;
-        }
+body {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at center, #480000 0%, #160000 40%, #000 85%);
+    color: white;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
 
-        header {
-            padding: 22px;
-            border-bottom: 2px solid #a100ff;
-            box-shadow: 0 0 20px #a100ff;
-            font-size: 28px;
-            font-weight: bold;
-        }
+header {
+    padding: 22px;
+    text-align: center;
+    letter-spacing: 6px;
+    border-bottom: 1px solid #a00000;
+    background: #050000;
+    box-shadow: 0 0 20px #b00000;
+    font-size: 20px;
+}
 
-        header span {
-            color: #c000ff;
-        }
+main {
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
 
-        main {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 20px;
-        }
+h1 {
+    font-size: clamp(38px, 8vw, 90px);
+    font-weight: 900;
+    letter-spacing: 5px;
+    background: linear-gradient(
+      180deg, #fff, #ff5555, #a00000, #ff0000
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 12px red);
+    animation: resplandor 2s infinite alternate;
+}
 
-        .corona {
-            font-size: 75px;
-            filter: drop-shadow(0 0 15px #c000ff);
-        }
+h2 {
+    font-size: clamp(22px, 5vw, 45px);
+    margin-top: 15px;
+    color: #ff3333;
+    text-shadow: 0 0 15px red;
+    letter-spacing: 5px;
+}
 
-        h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: clamp(55px, 10vw, 105px);
-            color: white;
-            text-shadow: 0 0 15px #a100ff,
-                         0 0 35px #a100ff;
-            margin: 10px 0 20px;
-        }
+@keyframes resplandor {
+    from { filter: drop-shadow(0 0 5px #900); }
+    to { filter: drop-shadow(0 0 25px red); }
+}
 
-        h1 span {
-            color: #c000ff;
-        }
+.corona {
+    font-size: 85px;
+    filter: drop-shadow(0 0 20px red);
+    margin-bottom: 10px;
+}
 
-        p {
-            max-width: 700px;
-            font-size: 18px;
-            line-height: 1.9;
-            color: #eee0ff;
-            margin-bottom: 35px;
-        }
+.adornos {
+    font-size: 35px;
+    color: #ff2020;
+    text-shadow: 0 0 15px red;
+    letter-spacing: 15px;
+    margin: 25px;
+}
 
-        .boton {
-            color: white;
-            text-decoration: none;
-            padding: 15px 35px;
-            border: 2px solid #c000ff;
-            border-radius: 40px;
-            box-shadow: 0 0 15px #a100ff;
-            transition: 0.3s;
-        }
+.lateral {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(35px, 6vw, 75px);
+    color: #b00000;
+    text-shadow: 0 0 20px red;
+}
 
-        .boton:hover {
-            background: #a100ff;
-            box-shadow: 0 0 30px #c000ff;
-        }
+.izquierda { left: 4%; }
+.derecha { right: 4%; }
 
-        .decoracion {
-            font-size: 30px;
-            margin: 25px;
-            color: #d58aff;
-            text-shadow: 0 0 15px #a100ff;
-        }
+p {
+    max-width: 650px;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 30px;
+}
 
-        footer {
-            padding: 20px;
-            color: #b98ad6;
-            font-size: 13px;
-        }
-    </style>
+button {
+    margin-top: 35px;
+    padding: 16px 35px;
+    background: #160000;
+    color: white;
+    border: 2px solid #e00000;
+    box-shadow: 0 0 20px red;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #a00000;
+    transform: scale(1.06);
+}
+
+#mensaje {
+    color: #ff5555;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #a44;
+    border-top: 1px solid #700;
+}
+
+@media(max-width: 600px) {
+    .lateral { opacity: .35; }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        ♛ Mariano <span>Web</span>
-    </header>
+<header>
+    ✦ LOS ILUMINATIS ✦
+</header>
 
-    <main>
-        <div class="decoracion">🦋 ✨ ♛ ✨ 🦋</div>
+<main>
 
-        <div class="corona">👑</div>
+    <div class="lateral izquierda">😈</div>
+    <div class="lateral derecha">👿</div>
 
-        <h1>Bienvenidos a <span>Mariano Web</span></h1>
+    <div class="corona">♛</div>
 
-        <p>
-            Un espacio creado con creatividad, dedicación e imaginación.
-            Aquí cada idea se convierte en una nueva oportunidad para
-            aprender, descubrir y crear. 💜
-        </p>
+    <div class="adornos">✦ ⛧ ✦</div>
 
-        <a href="#mensaje" class="boton">Explora más →</a>
+    <h1>LOS ILUMINATIS</h1>
+    <h2>NUEVA GENERACIÓN</h2>
 
-        <div id="mensaje" class="decoracion">
-            ✨ Gracias por visitar mi página ✨
-        </div>
-    </main>
+    <div class="adornos">🔥 ✧ 🔥</div>
 
-    <footer>
-        © 2026 Mariano Web | Creado con creatividad 💜
-    </footer>
+    <p>
+        Bienvenidos a una nueva generación.
+        Un espacio de misterio, creatividad,
+        personalidad y estilo.
+        Una nueva historia comienza aquí.
+    </p>
+
+    <button onclick="mostrarMensaje()">
+        EXPLORA MÁS →
+    </button>
+
+    <div id="mensaje"></div>
+
+</main>
+
+<footer>
+    © 2026 LOS ILUMINATIS - NUEVA GENERACIÓN
+</footer>
+
+<script>
+function mostrarMensaje() {
+    document.getElementById("mensaje").textContent =
+    "🔥 UNA NUEVA GENERACIÓN COMIENZA 🔥";
+}
+</script>
 
 </body>
 </html>
